@@ -45,9 +45,6 @@ Preview: https://repl.it/@IghoiseO/TicTacToe-Ultimate-Rivals
       //The program heavily relies on screen width so I save them in thes variables
       let canvasWidth = window.innerWidth;
       let canvasHeight = window.innerHeight;
-      
-      //Sets the background image
-      let bg = "skyblue";
 
       //This confetti variable stores an array of confetti objects which are updated once per second
       let confetti = [];
@@ -56,7 +53,7 @@ Preview: https://repl.it/@IghoiseO/TicTacToe-Ultimate-Rivals
       let numConfetti = 500;
 
       //These variables are the max and min size of a confetti piece
-      let maxSize = canvasHeight/125;
+      let maxSize = canvasHeight/80;
       let minSize = canvasHeight/200;
 
       //These variables store the max and min dropping speed of the confetti
@@ -141,8 +138,8 @@ Preview: https://repl.it/@IghoiseO/TicTacToe-Ultimate-Rivals
       }
 
       function draw() {
-        //Sets the background image
-        background(bg);
+        //Sets the background color
+        background(mouseX, mouseY, mouseX - mouseY);
         //When the user has clicked the following code runs
         if (startRun == true) {
           //This loops through each confetti and draws them on the page based on their new location 
