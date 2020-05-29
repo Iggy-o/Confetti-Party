@@ -167,7 +167,7 @@ Preview: https://repl.it/@IghoiseO/Confetti-Party#index.html
             noise_num += 0.05;
             for(let i = 0; i < numConfetti; i++){
               let p = confetti[i];
-              if (p.y > canvasHeight + deletePoint){
+              if (p.y > canvasHeight + deletePoint|| p.x > canvasWidth || p.x < 0){
                 confetti[i] = "";
                 blanks += 1;
               }
